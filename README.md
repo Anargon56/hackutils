@@ -1,5 +1,5 @@
 # tutils
-### Autoinstaller
+### Autoinstaller for Termux
 
 **Usage:**<br>
 $ git clone https://github.com/Pix-head/tutils<br>
