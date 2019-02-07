@@ -24,10 +24,12 @@ def stress_test_install():
 			print("[MODoS] Starting installation\n")
 			os.system("sh ./lib/install_modos.sh")
 			print("\nDONE")
+			input("Press ENTER to continue")
 		elif ans == '2':
 			print("[SFlooder] Starting installation\n")
 			os.system("sh ./lib/install_sflooder.sh")
 			print("\nDONE")
+			input("Press ENTER to continue")
 		elif ans.lower() == 'q':
 			break
 			main_menu()
@@ -57,6 +59,7 @@ def fishing_install():
 			print("[SFish] Starting installation\n")
 			os.system("sh ./lib/install_sfish.sh")
 			print("\nDONE")
+			input("Press ENTER to continue")
 		elif ans == '2':
 			print("[SFish] Starting installation\n")
 			os.system("sh ./lib/install_weeman.sh")
@@ -89,6 +92,7 @@ def gathering_tools_install():
 			print("[RED_HAWK] Starting installation\n")
 			os.system("sh ./lib/install_rhawk.sh")
 			print("\nDONE")
+			input("Press ENTER to continue")
 		elif ans.lower() == 'q':
 			break
 			main_menu()
@@ -119,14 +123,17 @@ def exploits_install():
 			print("[Metasploit] Starting installation\n")
 			os.system("sh ./lib/install_msf.sh")
 			print("\nDONE")
+			input("Press ENTER to continue")
 		elif ans == '2':
 			print("[Routersploit] Starting installation\n")
 			os.system("sh ./lib/install_rsploit.sh")
 			print("\nDONE")
+			input("Press ENTER to continue")
 		elif ans == '3':
 			print("[Websploit] Starting installation\n")
 			os.system("sh ./lib/install_wsploit.sh")
 			print("\nDONE")
+			input("Press ENTER to continue")
 		elif ans.lower() == 'q':
 			break
 			main_menu()
