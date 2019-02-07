@@ -6,7 +6,7 @@ def stress_test_install():
 	ans = ""
 	
 	while True:
-		os.system('cls')
+		os.system('clear')
 
 		print("""
 	   TERMUX UTILS
@@ -39,7 +39,7 @@ def fishing_install():
 	ans = ""
 	
 	while True:
-		os.system('cls')
+		os.system('clear')
 
 		print("""
 	   TERMUX UTILS
@@ -54,9 +54,13 @@ def fishing_install():
 		ans = input("> ")
 
 		if ans == '1':
-			pass
+			print("[SFish] Starting installation\n")
+			os.system("sh ./lib/install_sfish.sh")
+			print("\nDONE")
 		elif ans == '2':
-			pass
+			print("[SFish] Starting installation\n")
+			os.system("sh ./lib/install_weeman.sh")
+			print("\nDONE")
 		elif ans.lower() == 'q':
 			break
 			main_menu()
@@ -64,18 +68,17 @@ def fishing_install():
 			print("Wrong input!")
 			time.sleep(2)
 
-def fishing_install():
+def gathering_tools_install():
 	ans = ""
 	
 	while True:
-		os.system('cls')
+		os.system('clear')
 
 		print("""
 	   TERMUX UTILS
 	 (Info gathering)
 	/================/
 	/1/ RED HAWK
-	/2/ 
 	/Q/ Main menu
 	/================/
 			""") 
@@ -83,9 +86,47 @@ def fishing_install():
 		ans = input("> ")
 
 		if ans == '1':
-			pass
+			print("[RED_HAWK] Starting installation\n")
+			os.system("sh ./lib/install_rhawk.sh")
+			print("\nDONE")
+		elif ans.lower() == 'q':
+			break
+			main_menu()
+		else:
+			print("Wrong input!")
+			time.sleep(2)
+
+def exploits_install():
+	ans = ""
+	
+	while True:
+		os.system('clear')
+
+		print("""
+	   TERMUX UTILS
+	 (Exploits usage)
+	/================/
+	/1/ Metasploit-framework
+	/2/ Routersploit
+	/3/ Websploit
+	/Q/ Main menu
+	/================/
+			""") 
+
+		ans = input("> ")
+
+		if ans == '1':
+			print("[Metasploit] Starting installation\n")
+			os.system("sh ./lib/install_msf.sh")
+			print("\nDONE")
 		elif ans == '2':
-			pass
+			print("[Routersploit] Starting installation\n")
+			os.system("sh ./lib/install_rsploit.sh")
+			print("\nDONE")
+		elif ans == '3':
+			print("[Websploit] Starting installation\n")
+			os.system("sh ./lib/install_wsploit.sh")
+			print("\nDONE")
 		elif ans.lower() == 'q':
 			break
 			main_menu()
@@ -97,7 +138,7 @@ def main_menu():
 	ans = ""
 	
 	while True:
-		os.system('cls')
+		os.system('clear')
 
 		print("""
 	   TERMUX UTILS
@@ -116,11 +157,11 @@ def main_menu():
 		if ans == '1':
 			stress_test_install()
 		elif ans == '2':
-			pass
+			fishing_install()
 		elif ans == '3':
-			pass
+			gathering_tools_install()
 		elif ans == '4':
-			pass
+			exploits_install()
 		elif ans.lower() == 'q':
 			break
 		else:
