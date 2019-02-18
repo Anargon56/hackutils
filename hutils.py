@@ -9,11 +9,12 @@ def stress_test_install():
 		os.system('clear')
 
 		print("""
-	   TERMUX UTILS
+	    HACK UTILS
 	 (Stress testing)
 	/================/
 	/1/ MODoS (http/tcp/udp)
 	/2/ SFlooder (http)
+	/3/ hflooder (http)
 	/Q/ Main menu
 	/================/
 			""") 
@@ -30,6 +31,11 @@ def stress_test_install():
 			os.system("sh ./lib/install_sflooder.sh")
 			print("\n[SFlooder] DONE")
 			input("Press ENTER to continue")
+		elif ans == '3':
+			print("[hflooder] Starting installation\n")
+			os.system("sh ./lib/install_hflooder.sh")
+			print("\n[hflooder] DONE")
+			input("Press ENTER to continue")
 		elif ans.lower() == 'q':
 			break
 			main_menu()
@@ -44,7 +50,7 @@ def fishing_install():
 		os.system('clear')
 
 		print("""
-	   TERMUX UTILS
+	    HACK UTILS
 	    (Fishing)
 	/================/
 	/1/ Social Fish
@@ -78,10 +84,11 @@ def gathering_tools_install():
 		os.system('clear')
 
 		print("""
-	   TERMUX UTILS
+	    HACK UTILS
 	 (Info gathering)
 	/================/
 	/1/ RED HAWK
+	/2/ Webhunter(may not work in termux)
 	/Q/ Main menu
 	/================/
 			""") 
@@ -92,6 +99,11 @@ def gathering_tools_install():
 			print("[RED_HAWK] Starting installation\n")
 			os.system("sh ./lib/install_rhawk.sh")
 			print("\n[RED_HAWK] DONE")
+			input("Press ENTER to continue")
+		if ans == '2':
+			print("[Webhunter] Starting installation\n")
+			os.system("sh ./lib/install_whunter.sh")
+			print("\n[Webhunter] DONE")
 			input("Press ENTER to continue")
 		elif ans.lower() == 'q':
 			break
@@ -107,10 +119,10 @@ def exploits_install():
 		os.system('clear')
 
 		print("""
-	   TERMUX UTILS
-	 (Exploits usage)
+	    HACK UTILS
+	  (Exploitation)
 	/================/
-	/1/ Metasploit-framework
+	/1/ Metasploit-framework(termux)
 	/2/ Routersploit
 	/3/ Websploit
 	/Q/ Main menu
@@ -141,6 +153,47 @@ def exploits_install():
 			print("Wrong input!")
 			time.sleep(2)
 
+def pentest_install():
+	ans = ""
+	
+	while True:
+		os.system('clear')
+
+		print("""
+	    HACK UTILS
+	   (Pentesting)
+	/================/
+	/1/ Sqlmap
+	/2/ StealBuilder
+	/3/ StealBuilder (termux)
+	/Q/ Main menu
+	/================/
+			""") 
+
+		ans = input("> ")
+
+		if ans == '1':
+			print("[Sqlmap] Starting installation\n")
+			os.system("sh ./lib/install_smap.sh")
+			print("\n[Sqlmap] DONE")
+			input("Press ENTER to continue")
+		elif ans == '2':
+			print("[StealBuilder] Starting installation\n")
+			os.system("sh ./lib/install_sbuilder.sh")
+			print("\n[StealBuilder] DONE")
+			input("Press ENTER to continue")
+		elif ans == '3':
+			print("[StealBuilder] Starting installation\n")
+			os.system("sh ./lib/install_sbuilder-tx.sh")
+			print("\n[StealBuilder] DONE")
+			input("Press ENTER to continue")
+		elif ans.lower() == 'q':
+			break
+			main_menu()
+		else:
+			print("Wrong input!")
+			time.sleep(2)
+
 def main_menu():
 	ans = ""
 	
@@ -148,13 +201,14 @@ def main_menu():
 		os.system('clear')
 
 		print("""
-	   TERMUX UTILS
+	    HACK UTILS
 	   (Main  menu)
 	/================/
 	/1/ Stress testing
 	/2/ Fishing
 	/3/ Info gathering
 	/4/ Exploitation
+	/5/ Penetration testing
 	/Q/ Exit
 	/================/
 			""") 
@@ -169,6 +223,8 @@ def main_menu():
 			gathering_tools_install()
 		elif ans == '4':
 			exploits_install()
+		elif ans == '5':
+			pentest_install()
 		elif ans.lower() == 'q':
 			break
 		else:
