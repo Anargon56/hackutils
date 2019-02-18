@@ -1,7 +1,7 @@
-# tutils
-### Autoinstaller for Termux
+# hack utils
+### Autoinstaller for Linux/Termux
 
 **Usage:**<br>
-$ git clone https://github.com/Pix-head/tutils<br>
-$ cd tutils<br>
-$ python tustart.py<br>
+$ git clone https://github.com/Pix-head/hackutils<br>
+$ cd hackutils<br>
+$ python hutils.py<br>
